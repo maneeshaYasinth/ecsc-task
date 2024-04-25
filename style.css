@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    background-image: url(assests/ecsc_logo_body.png);
+    backdrop-filter: blur(20px);
+    background-size: contain;
+    min-height: 100vh;
+    min-width: 320px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  nav{
+    background-color: rgb(20, 87, 175);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+  }
+  nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav li{
+    height: 50px;
+  }
+ 
+  nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  nav a:hover{
+    background-color: #4080ff48;
+  }
+
+  nav li:first-child{
+    margin-right: auto;
+  }
+
+  .sidebar{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color:  rgb(20, 87, 175);
+    backdrop-filter: blur(200px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .sidebar li{
+    width: 100%;
+  }
+
+  .sidebar a{
+    width: 100%;
+  }
+
+  .menu-button{
+    display: none;
+  }
+
+  @media(max-width: 800px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+  }
+
+  @media(max-width: 400px){
+    .sidebar{
+      width: 100%;
+    }
+  }
+
+
+
+.home-title {
+    margin-top: 20%;
+    margin-left: 10%;
+    font-size: 3rem;
+  }    
+  
+.home-title span{
+    color:rgb(20, 87, 175);
+}
+
+.home-quote{
+    margin-left: 10%;
+    text-align: start;
+    margin-top: 2ch;
+    font-size: 1.5rem;
+}
