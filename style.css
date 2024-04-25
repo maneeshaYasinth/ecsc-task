@@ -34,15 +34,20 @@
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
+    font-weight: bold;
     display: flex;
     align-items: center;
     color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:  Tahoma, sans-serif;
   }
 
   nav a:hover{
-    background-color: #4080ff48;
+   /*background-color: #4080ff48;*/
+    text-decoration: underline rgba(69, 166, 235, 0.693);
+    animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   }
+    
+  
 
   nav li:first-child{
     margin-right: auto;
