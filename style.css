@@ -1,116 +1,184 @@
-*{
-    margin: 0;
-    padding: 0;
-  }
-  body{
-    background-image: url(assests/ecsc_logo_body.png);
-    backdrop-filter: blur(20px);
-    background-size: contain;
-    min-height: 100vh;
-    min-width: 320px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  nav{
-    background-color: rgb(20, 87, 175);
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1000;
-  }
-  nav ul{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  nav li{
-    height: 50px;
-  }
- 
-  nav a{
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    color: black;
-    font-family:  Tahoma, sans-serif;
-  }
-
-  nav a:hover{
-   /*background-color: #4080ff48;*/
-    text-decoration: underline rgba(69, 166, 235, 0.693);
-    animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  }
-    
-  
-
-  nav li:first-child{
-    margin-right: auto;
-  }
-
-  .sidebar{
-    position: fixed;
-    top: 0; 
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    background-color:  rgb(20, 87, 175);
-    backdrop-filter: blur(200px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-
-  .sidebar li{
-    width: 100%;
-  }
-
-  .sidebar a{
-    width: 100%;
-  }
-
-  .menu-button{
-    display: none;
-  }
-
-  @media(max-width: 800px){
-    .hideOnMobile{
-      display: none;
-    }
-    .menu-button{
-      display: block;
-    }
-  }
-
-  @media(max-width: 400px){
-    .sidebar{
-      width: 100%;
-    }
-  }
-
-
-
-.home-title {
-    margin-top: 20%;
-    margin-left: 10%;
-    font-size: 3rem;
-  }    
-  
-.home-title span{
-    color:rgb(20, 87, 175);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.home-quote{
-    margin-left: 10%;
-    text-align: start;
-    margin-top: 2ch;
-    font-size: 1.5rem;
+
+nav {
+  background-color: rgb(20, 87, 175);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-family: Tahoma, sans-serif;
+}
+
+nav a:hover {
+  /*background-color: #4080ff48;*/
+  text-decoration: underline rgba(69, 166, 235, 0.693);
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  max-width: 250px;
+  background-color: rgb(20, 87, 175);
+  backdrop-filter: blur(200px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .sidebar {
+    width: 80%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.home-container {
+  background-image: url(assests/ecsc_logo_body.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative; 
+  min-height: 100vh;
+  min-width: 320px;
+ 
+}
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px);
+}
+.home-title {
+  margin-top: 20%;
+  margin-left: 10%;
+  font-size: 3rem;
+}
+
+.home-title span {
+  color: rgb(20, 87, 175);
+}
+
+.home-quote {
+  margin-left: 10%;
+  text-align: start;
+  margin-top: 2ch;
+  font-size: 1.5rem;
+}
+
+.aboutUs-container {
+  background-color: rgb(20, 87, 175);
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.cards-container {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto; 
+}
+
+.card {
+  width: calc(33.33% - 1rem); 
+  height: 400px;
+  margin: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-size: cover;
+  backdrop-filter: blur(10px); 
+  transition: filter 0.3s ease;
+}
+
+.card:hover img {
+  filter: blur(5px); 
+}
+
+
+.card h5 {
+  margin: 2%;
+}
+
+.card1 {
+  background-image: url(assests/electronics.jpg);
+}
+
+.card2 {
+  background-image: url(assests/compsci.jpg);
+}
+
+.card3 {
+  background-image: url(assests/uok_adf5e690ac.jpg);
+}
+
+@media (max-width: 767px) {
+  .card {
+      width: calc(90% - 2rem);  
+  }
 }
