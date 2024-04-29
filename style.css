@@ -6,15 +6,18 @@
 
 
 nav {
-  background-color: rgb(20, 87, 175);
+  background-color: rgb(13, 63, 129);
+  height: 5rem;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1000;
 }
 
 nav ul {
+  padding-top: 1%;
   width: 100%;
   list-style: none;
+  font-size: 1.2rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -37,7 +40,7 @@ nav a {
 
 nav a:hover {
   /*background-color: #4080ff48;*/
-  text-decoration: underline rgba(69, 166, 235, 0.693);
+  text-decoration: underline beige;
   animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
@@ -132,9 +135,23 @@ nav li:first-child {
 
 .aboutUs-container {
   background-color: rgb(20, 87, 175);
-  margin-top: 10%;
   display: flex;
   justify-content: center;
+}
+
+.aboutUs-title{
+  height: 5rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  background-color: rgb(13, 63, 129); 
+}
+
+.aboutUs-title h4{
+  font-size: 2rem;
+  padding-top: 1%;
+  margin-left: 5%;
+  height: 100%;
+  color: beige;
 }
 
 .cards-container {
