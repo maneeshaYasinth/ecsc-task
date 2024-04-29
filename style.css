@@ -250,3 +250,46 @@ nav li:first-child {
   font-family: "Zilla Slab", serif;
 }
 
+.vision-mission {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.mission,
+.vision {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.mission h3,
+.vision h3 {
+  margin-top: 0;
+}
+
+.mission-discription,
+.vision-discription {
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .mission,
+  .vision {
+    width: calc(100% - 20px);
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .mission,
+  .vision {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px; /* Adjust the max-width as needed */
+  }
+}
