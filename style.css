@@ -1,6 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Kanit:wght@300&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 
 * {
   margin: 0;
@@ -38,7 +37,7 @@ nav a {
   height: 100%;
   padding: 0 30px;
   text-decoration: none;
-  font-weight: bold;
+  font-family: "Forum", serif;
   display: flex;
   align-items: center;
   color: black;
@@ -261,9 +260,12 @@ nav li:first-child {
 
 .mission h3,
 .vision h3 {
+  font-family: "Zilla Slab", serif;
   margin-top: 0;
   display: flex;
   align-items: center;
+  font-size: 2rem;
+  text-decoration: underline solid#e91e6294;
 }
 
 
@@ -271,6 +273,7 @@ nav li:first-child {
 .mission-discription,
 .vision-discription {
   margin-top: 10px;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 767px) {
@@ -377,4 +380,34 @@ ul{
   .footer-col{
     width: 100%;
 }
+}
+
+
+/* Styling for the .copyright class */
+.copyright {
+  width: 90%;
+  position: relative; /* Make the container relative to position the line */
+  margin: 40px auto 0; /* Center the container horizontally and add top margin */
+}
+
+.copyright::before {
+  content: ''; /* Add content for the pseudo-element */
+  position: absolute; /* Position the pseudo-element */
+  top: 50%; /* Position it halfway vertically */
+  left: 0; /* Align it to the left */
+  width: 100%; /* Make it span the entire width */
+  border-top: 2px solid whitesmoke; /* Set the border */
+  z-index: -1; /* Ensure it's behind the text */
+}
+
+/* Styling for the nested p element */
+.copyright p {
+  font-size: 1.5rem;
+  text-align: center; /* Center the text horizontally */
+  margin: 0; /* Remove default margin */
+  position: relative; /* Make the position relative for z-index to work */
+  background-color: rgba(255, 255, 255, 0.338); /* Ensure it covers the line */
+  padding: 10px; /* Add padding for better appearance */
+  z-index: 1; /* Ensure the text is above the line */
+  border-radius: 5px;
 }
