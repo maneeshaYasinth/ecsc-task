@@ -35,30 +35,18 @@ nav a {
   height: 100%;
   padding: 0 30px;
   text-decoration: none;
-  font-weight: bold;
+  font-family: "Forum", serif;
   display: flex;
   align-items: center;
   color: black;
-  font-family: "Montserrat", sans-serif;
-  position: relative; /* Add this line */
+  font-family: Tahoma, sans-serif;
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: transparent; /* Set initial color to transparent */
-  transition: width 0.3s ease; /* Smooth transition */
+nav a:hover {
+  /*background-color: #4080ff48;*/
+  text-decoration: underline beige;
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
-
-nav a:hover::after {
-  width: 100%; 
-  background-color: #e91e62; 
-}
-
 
 nav li:first-child {
   margin-right: auto;
@@ -112,8 +100,6 @@ nav li:first-child {
     width: 100%;
   }
 }
-
-
 .home-container {
   background-image: url(assests/ecsc_logo_body.png);
   background-size: cover;
@@ -185,59 +171,94 @@ nav li:first-child {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .card {
-  width: calc(33.33% - 1rem); 
+  width: calc(30% - 1rem);
   height: 400px;
   margin: 1rem;
   border-radius: 1rem;
   overflow: hidden;
-  background-size: cover;
-  backdrop-filter: blur(5px); 
-  transition: filter 0.3s ease;
+  position: relative;
+  display: flex; /* Center content */
+  justify-content: center; /* Center content */
+  align-items: center; /* Center content */
 }
 
 .card img {
-  filter: blur(5px); 
+  filter: blur(8px);
 }
-
 
 .card h5 {
-  color: white;
-  font-size: 1.5rem;
-  margin: 5%;
+  color: #a1bef0;
+  font-size: 2rem;
   font-family: "Kanit", sans-serif;
-  text-decoration:wavy;
-}
-
-.card {
-  position: relative;
+  font-weight: bolder;
+  text-decoration: wavy;
+  position: absolute; /* Position it absolutely for movement */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Transition transform and opacity */
+  z-index: 1; /* Ensure h5 stays above the blur */
 }
 
 .card::before {
-  content: ""; 
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  filter: blur(2px);
-  z-index: -1; 
-  background-size: cover; 
+  background-size: cover;
+  transition: filter 0.3s ease; /* Transition on filter */
 }
 
 .card1::before {
-  background-image: url(assests/electronics.jpg);
+  background-image: url('assests/electronics.jpg');
+  filter: blur(3px);
 }
 
 .card2::before {
-  background-image: url(assests/compsci.jpg);
+  background-image: url('assests/compsci.jpg');
+  filter: blur(3px);
 }
 
 .card3::before {
-  background-image: url(assests/uok_adf5e690ac.jpg);
+  background-image: url('assests/uok_adf5e690ac.jpg');
+  filter: blur(3px);
+}
+
+
+.card p {
+  
+  color: beige;
+  height: 100%;
+  font-size: 1.2rem;
+  font-family: "Zilla Slab", serif;
+  transition: transform 0.5s ease;
+  position: relative;
+  z-index: 1;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50%); /* Initially pushed down */
+  text-align: center; /* Center-align the content */
+}
+
+
+
+
+.card:hover p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  background-color: rgba(0, 0, 0, 0.216);
+  opacity: 1; /* Show p on hover */
+  transform: translateY(0); /* Bring p up on hover */
+  backdrop-filter: blur(5px);
+}
+
+.card:hover h5 {
+  transform: translateY(-50%); /* Move h5 up on hover */
+  opacity: 0; /* Make h5 disappear on hover */
 }
 
 @media (max-width: 767px) {
@@ -246,14 +267,173 @@ nav li:first-child {
   }
 }
 
-.card p{
-  padding: 5%;
-  background-color: rgba(0, 0, 0, 0.216);
-  color: beige;
-  height: 100%;
-  font-size: 1.2rem;
-  font-family: "Zilla Slab", serif;
+.button {
+  position: relative; /* Make the container relative to position the pseudo-element */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure the button container fills its parent */
 }
+
+.more-btn {
+  position: relative; /* Ensure the button is positioned relative */
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 1rem;
+  background-color: transparent; /* Make the background transparent initially */
+  color: #007bff; /* Initial text color */
+  border: 2px solid #007bff; /* Add border initially */
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden; /* Hide overflow for the pseudo-element */
+}
+
+.more-btn::before {
+  content: ''; /* Add pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; /* Initially, the pseudo-element has no width */
+  height: 100%;
+  background-color: #007bff;
+  z-index: -1; /* Behind the button text */
+  transition: width 0.3s ease; /* Transition the width property */
+}
+
+.more-btn:hover::before {
+  width: 100%; /* Expand the pseudo-element to fill the button on hover */
+}
+
+.more-btn:hover {
+  color: white; /* Change text color on hover */
+}
+
+/* Optional: Add media queries for responsiveness */
+@media screen and (max-width: 600px) {
+  .more-btn {
+    font-size: 0.8rem;
+  }
+}
+
+.page-content {
+  display: none; /* Initially hide the page content */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paras {
+  position: relative; /* Position relative for the pseudo-element */
+  background-image: url(assests/fos.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 1.5rem;
+  max-width: 90%;
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: justify;
+  padding: 20px; /* Add padding to the paragraphs */
+  overflow: hidden; /* Hide overflow for the pseudo-element */
+}
+
+.paras::after {
+  content: ''; /* Add a pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit; /* Inherit background image */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  z-index: -1; /* Behind the text content */
+}
+
+
+.paras {
+  background-image: url(assests/fos.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  font-size: 1.5rem;
+  max-width: 90%;
+  margin: 0 auto; /* Center the container horizontally */
+  text-align: justify;
+  padding: 20px; /* Add padding to the paragraphs */
+  position: relative; /* Position relative for the pseudo-element */
+}
+
+.paras::after {
+  content: ''; /* Add a pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit; /* Inherit background image */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+}
+
+
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .paras {
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+.close-button {
+  position: relative; /* Make the container relative to position the pseudo-element */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure the button container fills its parent */
+}
+
+.close-btn {
+  position: relative; /* Ensure the button is positioned relative */
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 1rem;
+  background-color: transparent; /* Make the background transparent initially */
+  color: #007bff; /* Initial text color */
+  border: 2px solid #007bff; /* Add border initially */
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden; /* Hide overflow for the pseudo-element */
+}
+
+.close-btn::before {
+  content: ''; /* Add pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; /* Initially, the pseudo-element has no width */
+  height: 100%;
+  background-color: #007bff;
+  z-index: -1; /* Behind the button text */
+  transition: width 0.3s ease; /* Transition the width property */
+}
+
+.close-btn:hover::before {
+  width: 100%; /* Expand the pseudo-element to fill the button on hover */
+}
+
+.close-btn:hover {
+  color: white; /* Change text color on hover */
+}
+
+/* Optional: Add media queries for responsiveness */
+@media screen and (max-width: 600px) {
+  .close-btn {
+    font-size: 0.8rem;
+  }
+}
+
 
 .vision-mission {
   display: flex;
