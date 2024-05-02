@@ -486,10 +486,12 @@ nav li:first-child {
 }
 
 .silder-Containor{
-  background-color: #073a70;
+  background-color: #0b509a;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 5px solid white;
+  border-radius: 5px;
 
 }
 .slider {
@@ -567,7 +569,9 @@ ul{
 }
 .footer{
 	background-color: rgb(13, 63, 129);
-    padding: 70px 0;
+    padding-top:  70px;
+    padding-bottom: 10px;
+
 }
 .footer-col{
    width: 25%;
@@ -646,6 +650,8 @@ ul{
   width: 90%;
   position: relative; 
   margin: 40px auto 0; 
+  margin-bottom: 0%;
+ 
 }
 
 .copyright::before {
