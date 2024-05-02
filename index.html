@@ -6,14 +6,23 @@
     <title>ECSC UOK</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+   <!--============== CSS =============-->
+  <link rel="stylesheet" href="./Style.css">
+  <!--============== Bootstrap link =============-->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"> -->
+  <!-- _____ Slick Slider _____ -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+
+
 </head>
 <body>
     <nav>
         <ul class="sidebar">
-          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+          <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
           <li><a href="#home">Home</a></li>
           <li><a href="#aboutUs">About Us</a></li>
-          <li><a href="#">Events</a></li>
+          <li><a href="#events-page">Events</a></li>
           <li><a href="#contactUs">contact Us</a></li>
           
         </ul>
@@ -21,9 +30,9 @@
           <li ><a href="#home" ><img src="assests/ecsc_logo_header.png" alt="ecsc-logo" height="50px" width="60px"></a></li>
           <li class="hideOnMobile"><a href="#home">Home</a></li>
           <li class="hideOnMobile"><a href="#aboutUs">About Us</a></li>
-          <li class="hideOnMobile"><a href="#">Events</a></li>
+          <li class="hideOnMobile"><a href="#events-page">Events</a></li>
           <li class="hideOnMobile"><a href="#contactUs">contact Us</a></li>
-          <li class="menu-button" onclick=showSidebar() ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+          <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
         </ul>
       </nav>
 
@@ -82,7 +91,7 @@
         <button class="more-btn">LEARN MORE ABOUT US</button>
     </div>
     <div class="page-content" id="page-content">
-        <div class="background"></div> <!-- Background element -->
+        <div class="background"></div> 
         <div class="paras">
             <p>Electronics and Computer Science Club was established by the undergraduates of the degree program of BSc (Hons) in Electronics and Computer Science. All the undergraduates of the particular degree program are having the membership of the club. Mainly, this degree program of BSc (Hons)in Electronics and Computer Science is offering by the Department of Electronics, Department of Computer Science and Department of Mathematics.</p>
             <br>
@@ -94,15 +103,22 @@
         <div class="close-button"> <button class="close-btn" id="btn-close">Close</button></div>
     </div>
     
-
-
-    
-    <div class="events-page">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At in nam dolorum corrupti porro, ut ea hic omnis! Dignissimos, velit! Expedita maxime animi velit, deleniti quasi molestiae veritatis deserunt voluptatibus tempora dolorum fugiat vel voluptas alias repellendus, ipsa error qui at ad temporibus accusantium beatae pariatur nostrum cumque quae! Iusto, aut eos consequuntur molestias fugiat, numquam eum odio, a fugit cumque error? Minus esse vero placeat harum, quis dignissimos! Odio deserunt repellat labore rerum recusandae qui molestiae amet iure officia modi natus voluptatem, asperiores vero quasi voluptatum mollitia totam et nisi dolore tempora aut ea facilis perferendis itaque! Optio, et.</p>
+<div class="events" id="events-page">
+    <div class="events-title">Latest Updates</div>
+</div>
+<div class="silder-Containor">
+    <div class="slider">
+        <div class="card-slider" tabindex="0"><img src="assests/awareness_session.jpg" alt="" height="200px" width="200px"><div class="overlay">Text for Card 1</div></div>
+        <div class="card-slider" tabindex="0"><img src="assests/career_guidance.jpg" alt="" height="200px" width="200px"><div class="overlay">Text for Card 2</div></div>
+        <div class="card-slider" tabindex="0"><img src="assests/did=u=know1.jpg" alt="" height="200px" width="200px"><div class="overlay">Text for Card 3</div></div>
+        <div class="card-slider" tabindex="0"><img src="assests/did=u=know2.jpg" alt="" height="200px" width="200px"><div class="overlay">Text for Card 4</div></div>
+        <div class="card-slider" tabindex="0"><img src="assests/did=u=know2.jpg" alt="" height="200px" width="200px"><div class="overlay">Text for Card 5</div></div>
+        <div class="card-slider" tabindex="0"><img src="assests/did=u=know13.png" alt="" height="200px" width="200px"><div class="overlay">Text for Card 6</div></div>
+        <div class="card-slider" tabindex="0"><img src="assests/ecsc_agm.jpg" alt="" height="200px" width="200px"><div class="overlay">Text for Card 7</div></div>
+        <div class="card-slider" tabindex="1"><img src="assests/ecs_overall.jpg" alt="" height="200px" width="200px"><div class="overlay">Text for Card 8</div></div>
+      </div>
     </div>
-
-
-
+      
 
 
     <footer class="footer" id="contactUs">
@@ -127,10 +143,10 @@
                 <div class="footer-col">
                     <h4>SITE MAP</h4>
                     <ul>
-                     <li class="hideOnMobile"><a href="#home">Home</a></li>
-                     <li class="hideOnMobile"><a href="#aboutUs">About</a></li>
-                     <li class="hideOnMobile"><a href="#">Events</a></li>
-                     <li class="hideOnMobile"><a href="#contactUs">contact Us</a></li>
+                     <li ><a href="#home">Home</a></li>
+                     <li ><a href="#aboutUs">About</a></li>
+                     <li ><a href="#events-page">Events</a></li>
+                     <li ><a href="#contactUs">contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -149,7 +165,66 @@
         </div>
    </footer>
 
-    <script src="script.js"></script>
+   <script src="script.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+   <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000, // Set autoplay speed to 1 second
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false,
+              arrows: false
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              dots: false,
+              arrows: false
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: false,
+              arrows: false
+            }
+          }
+        ]
+      });
+  
+      $('.slider').on('afterChange', function(event, slick, currentSlide){
+        $('.card-slider').removeClass('focused');
+        $('.slider .slick-active').eq(1).addClass('focused');
+      });
+  
+      $('.card').on('keydown', function(event) {
+        if (event.key === 'Enter') {
+          $(this).focus();
+        }
+      });
+    });
+</script>
+
+   
     
 </body>
 </html>

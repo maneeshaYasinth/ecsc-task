@@ -21,3 +21,4 @@ document.getElementById('btn-close').addEventListener('click', function() {
   document.getElementById('page-content').style.display = 'none'; // Hide the page content when the close button is clicked
   document.getElementById('btn-more').style.display = 'flex'; // Show the "more" button
 });
+
