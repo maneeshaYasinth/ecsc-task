@@ -7,11 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
-   <!--============== CSS =============-->
   <link rel="stylesheet" href="./Style.css">
-  <!--============== Bootstrap link =============-->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"> -->
-  <!-- _____ Slick Slider _____ -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
 
 
@@ -19,7 +15,7 @@
 <body>
     <nav>
         <ul class="sidebar">
-          <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+          <li onclick="hideSidebar()"><a ><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
           <li><a href="#home">Home</a></li>
           <li><a href="#aboutUs">About Us</a></li>
           <li><a href="#events-page">Events</a></li>
@@ -32,7 +28,7 @@
           <li class="hideOnMobile"><a href="#aboutUs">About Us</a></li>
           <li class="hideOnMobile"><a href="#events-page">Events</a></li>
           <li class="hideOnMobile"><a href="#contactUs">contact Us</a></li>
-          <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+          <li class="menu-button" onclick="showSidebar()"><a ><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
         </ul>
       </nav>
 
@@ -172,65 +168,11 @@
         </div>
    </footer>
 
-   <script src="script.js"></script>
+   
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-   <script>
-    $(document).ready(function(){
-      $('.slider').slick({
-        dots: false,
-        arrows: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000, // Set autoplay speed to 1 second
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: false,
-              arrows: false
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-              dots: false,
-              arrows: false
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              dots: false,
-              arrows: false
-            }
-          }
-        ]
-      });
-  
-      $('.slider').on('afterChange', function(event, slick, currentSlide){
-        $('.card-slider').removeClass('focused');
-        $('.slider .slick-active').eq(1).addClass('focused');
-      });
-  
-      $('.card').on('keydown', function(event) {
-        if (event.key === 'Enter') {
-          $(this).focus();
-        }
-      });
-    });
-</script>
-
+   <script src="script.js"></script>
+   
    
     
 </body>

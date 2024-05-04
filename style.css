@@ -181,9 +181,9 @@ nav li:first-child {
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
-  display: flex; /* Center content */
-  justify-content: center; /* Center content */
-  align-items: center; /* Center content */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .card img {
@@ -196,9 +196,9 @@ nav li:first-child {
   font-family: "Kanit", sans-serif;
   font-weight: bolder;
   text-decoration: wavy;
-  position: absolute; /* Position it absolutely for movement */
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Transition transform and opacity */
-  z-index: 1; /* Ensure h5 stays above the blur */
+  position: absolute; 
+  transition: transform 0.5s ease, opacity 0.5s ease; 
+  z-index: 1; 
 }
 
 .card::before {
@@ -209,7 +209,7 @@ nav li:first-child {
   width: 100%;
   height: 100%;
   background-size: cover;
-  transition: filter 0.3s ease; /* Transition on filter */
+  transition: filter 0.3s ease; 
 }
 
 .card1::before {
@@ -237,9 +237,9 @@ nav li:first-child {
   transition: transform 0.5s ease;
   position: relative;
   z-index: 1;
-  opacity: 0; /* Initially hidden */
-  transform: translateY(50%); /* Initially pushed down */
-  text-align: center; /* Center-align the content */
+  opacity: 0; 
+  transform: translateY(50%); 
+  text-align: center;
 }
 
 
@@ -251,14 +251,14 @@ nav li:first-child {
   align-items: center;
   padding: 5%;
   background-color: rgba(0, 0, 0, 0.216);
-  opacity: 1; /* Show p on hover */
-  transform: translateY(0); /* Bring p up on hover */
+  opacity: 1;
+  transform: translateY(0); 
   backdrop-filter: blur(5px);
 }
 
 .card:hover h5 {
-  transform: translateY(-50%); /* Move h5 up on hover */
-  opacity: 0; /* Make h5 disappear on hover */
+  transform: translateY(-50%);
+  opacity: 0; 
 }
 
 @media (max-width: 767px) {
@@ -268,47 +268,47 @@ nav li:first-child {
 }
 
 .button {
-  position: relative; /* Make the container relative to position the pseudo-element */
+  position: relative; 
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Ensure the button container fills its parent */
+  height: 100%;
 }
 
 .more-btn {
-  position: relative; /* Ensure the button is positioned relative */
+  position: relative; 
   padding: 10px 20px;
   margin-top: 10px;
   font-size: 1rem;
-  background-color: transparent; /* Make the background transparent initially */
-  color: #007bff; /* Initial text color */
-  border: 2px solid #007bff; /* Add border initially */
+  background-color: transparent; 
+  color: #007bff; 
+  border: 2px solid #007bff; 
   border-radius: 10px;
   cursor: pointer;
-  overflow: hidden; /* Hide overflow for the pseudo-element */
+  overflow: hidden;
 }
 
 .more-btn::before {
-  content: ''; /* Add pseudo-element */
+  content: ''; 
   position: absolute;
   top: 0;
   left: 0;
-  width: 0; /* Initially, the pseudo-element has no width */
+  width: 0; 
   height: 100%;
   background-color: #007bff;
-  z-index: -1; /* Behind the button text */
-  transition: width 0.3s ease; /* Transition the width property */
+  z-index: -1; 
+  transition: width 0.3s ease; 
 }
 
 .more-btn:hover::before {
-  width: 100%; /* Expand the pseudo-element to fill the button on hover */
+  width: 100%; 
 }
 
 .more-btn:hover {
-  color: white; /* Change text color on hover */
+  color: white; 
 }
 
-/* Optional: Add media queries for responsiveness */
+
 @media screen and (max-width: 600px) {
   .more-btn {
     font-size: 0.8rem;
@@ -332,8 +332,8 @@ nav li:first-child {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #24262b92;
-  filter: blur(3px); /* Apply blur to the background only */
-  z-index: -1; /* Ensure the background stays behind the text */
+  filter: blur(3px); 
+  z-index: -1; 
   border: 10px solid rgb(20, 87, 175);
   border-radius: 5px;
   
@@ -350,55 +350,54 @@ nav li:first-child {
 }
 
 
-/* Adjustments for smaller screens */
+
 @media screen and (max-width: 768px) {
   .paras {
-    padding: 0 10px; /* Adjust padding for smaller screens */
+    padding: 0 10px; 
   }
 }
 
 .close-button {
-  position: relative; /* Make the container relative to position the pseudo-element */
+  position: relative; 
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Ensure the button container fills its parent */
+  height: 100%; 
 }
 
 .close-btn {
-  position: relative; /* Ensure the button is positioned relative */
+  position: relative; 
   padding: 10px 20px;
   margin-top: 10px;
   font-size: 1rem;
-  background-color: transparent; /* Make the background transparent initially */
-  color: white; /* Initial text color */
-  border: 2px solid white; /* Add border initially */
+  background-color: transparent; 
+  color: white; 
+  border: 2px solid white; 
   border-radius: 10px;
   cursor: pointer;
-  overflow: hidden; /* Hide overflow for the pseudo-element */
+  overflow: hidden; 
 }
 
 .close-btn::before {
-  content: ''; /* Add pseudo-element */
+  content: ''; 
   position: absolute;
   top: 0;
   left: 0;
-  width: 0; /* Initially, the pseudo-element has no width */
+  width: 0;
   height: 100%;
   background-color: white;
-  z-index: -1; /* Behind the button text */
-  transition: width 0.3s ease; /* Transition the width property */
+  z-index: -1; 
+  transition: width 0.3s ease; 
 }
 
 .close-btn:hover::before {
-  width: 100%; /* Expand the pseudo-element to fill the button on hover */
+  width: 100%; 
 }
 
 .close-btn:hover {
-  color: #007bff; /* Change text color on hover */
+  color: #007bff;
 }
 
-/* Optional: Add media queries for responsiveness */
 @media screen and (max-width: 600px) {
   .close-btn {
     font-size: 0.8rem;
@@ -459,7 +458,7 @@ nav li:first-child {
   .vision {
     margin-left: auto;
     margin-right: auto;
-    max-width: 960px; /* Adjust the max-width as needed */
+    max-width: 960px; 
   }
 }
 
@@ -495,8 +494,8 @@ nav li:first-child {
 
 }
 .slider {
-  width: 80%; /* Adjust slider width as needed */
-  margin: 0 auto; /* Center the slider */
+  width: 80%; 
+  margin: 0 auto; 
   
 }
 .card-slider {
@@ -510,9 +509,9 @@ nav li:first-child {
   font-size: 24px;
   position: relative;
   transition: all 0.3s ease;
-  padding: 20px; /* Added padding */
-  margin: 10px; /* Added margin for space between cards */
-  overflow: hidden; /* Hide overflow */
+  padding: 20px; 
+  margin: 10px; 
+  overflow: hidden; 
 }
 .card-slider:hover {
   transform: scale(1.1);
@@ -533,18 +532,18 @@ nav li:first-child {
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
-  text-align: center; /* Center the text */
+  text-align: center; 
 }
 .card-slider img {
   width: auto;
   height: 100%;
-  max-width: 100%; /* Ensure the image does not exceed the card's width */
-  object-fit: cover; /* Center the image within the card */
-  filter: blur(0); /* Initially, no blur */
-  transition: filter 0.3s ease; /* Smooth transition for blur effect */
+  max-width: 100%; 
+  object-fit: cover;
+  filter: blur(0); 
+  transition: filter 0.3s ease;
 }
 .card-slider:hover img {
-  filter: blur(3px); /* Apply blur effect on hover */
+  filter: blur(3px); 
 }
 
 .visit-us-containor {
@@ -567,7 +566,7 @@ nav li:first-child {
 
 .visit-us-map {
   width: 100%;
-  max-width: 600px; /* Adjust max-width as needed */
+  max-width: 600px; 
   margin: 0 auto;
   padding: 2%;
   border: 4px solid #0b509a;
@@ -578,7 +577,7 @@ nav li:first-child {
 
 .visit-us-map iframe {
   width: 100%;
-  height: 450px; /* Adjust height as needed */
+  height: 450px; 
 }
 
 .contactUs-containor{
